@@ -1,0 +1,3 @@
+name = input("Type a city name which you want to visit: ")
+number = input("Type your favorite number: ")
+print("The name of your Beer will be:\n '" + name + " " + number + "'\n the best")
