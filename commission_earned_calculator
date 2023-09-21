@@ -1,0 +1,5 @@
+print("Welcome to the commission earned calculator")
+name = input("What is your name?: ")
+amount_sold = input("How mucn did you sell this month? type the amount ")
+amount_sold = float(amount_sold)
+print(f"Hi {name}\nYour commission earned is {round(amount_sold*0.13,2)}\nCongratulation!" )
