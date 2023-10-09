@@ -1,0 +1,36 @@
+text = input("Enter a text: ")
+text = text.lower()
+letters = []
+letters.append(input("Enter the first letter:").lower())
+letters.append(input("Enter the second letter:").lower())
+letters.append(input("Enter the third letter:").lower())
+
+print("\n")
+print("LETTERS QUANTITY")
+letters_quantity1 = text.count(letters[0])
+letters_quantity2= text.count(letters[1])
+letters_quantity3 = text.count(letters[2])
+print(f"We found the letter ¨{letters[0]}¨ repeated {letters_quantity1} times in the text")
+print(f"We found the letter ¨{letters[1]}¨ repeated {letters_quantity1} times in the text")
+print(f"We found the letter ¨{letters[2]}¨ repeated {letters_quantity1} times in the text")
+
+print("\n")
+print("WORDS IN THE TEXT")
+words = text.split()
+print(f"We found ¨{len(words)}¨ words in the text")
+
+print("\n")
+print("FIRST AND LAST LETTER")
+print(f"The first letter in the text is ¨{text[0]}¨ while the last is ¨{text[-1:]}¨ ")
+
+print("\n")
+print("TEXT REVERSE")
+words.reverse()
+text_invert = " ".join(words)
+print(f"The text invert is: {text_invert}")
+
+print("\n")
+print("PYTHON IN TEXT")
+search_python = "python" in text
+dic = {True:"is",False:"is not"}
+print(f"The word ¨Python¨ {dic[search_python]} found in the text.")
