@@ -1,0 +1,25 @@
+from random import randint
+value = randint(1,100)
+guess = 0
+name = input("Welcome to the guess number game, tell me your name: ")
+print(f"Hi {name}, you have 8 strikes to guess the secret number which is in the range between 1 and 100")
+while guess <= 8:
+  num = input("Input a number: ")
+  if num.isdigit():
+    num = int(num)
+  else:
+    print("Input a number")
+    continue
+  guess += 1
+  match value:
+    case value if value < num:
+      print("your number is greater than the number you must guess")
+    case value if value > num:
+      print("your number is less than the number you must guess")
+    case num if num < 1 and num > 100:
+      print("Input a number between 1 to 100")
+    case num if num == value:
+      print(f"Congratulations {name}!, the secret number is {value}")
+      break
+if guess > 8:
+  print(f"I feel sorry, your tries has finished. The secret number is {value}")
